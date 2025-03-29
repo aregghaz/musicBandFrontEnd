@@ -17,20 +17,6 @@
     "noImplicitAny": false,
     "jsx": "react-jsx",
     "noUnusedLocals": false,
-    "paths": {
-      "@component/*": ["./src/components/*"],
-      "@dynamics/*": ["./src/dynamics/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@image/*": ["./src/images/*"],
-      "@page/*": ["./src/pages/*"],
-      "@routes/*": ["./src/routes/*"],
-      "@store/*": ["./src/store/*"],
-      "@svg/*": ["./src/svg/*"],
-      "@translations/*": ["./src/translations/*"],
-      "@type/*": ["./src/types/*"],
-      "@uikit/*": ["./src/uikit/*"],
-      "@utils/*": ["./src/utils/*"]
-    }
   },
   "rewrites": [
     {
