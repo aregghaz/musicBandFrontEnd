@@ -1,10 +1,12 @@
 import React from 'react';
+import BackgroundImage from '../../assets/img/25.jpg'
+
 
 const PreSaleSection = () => {
   return (
     <section className="divider overlay">
-      <div className="background-img">
-        <img src="img/24.jpg" alt="Pre-Sale Background" />
+    <div className="background-img">
+        <img src={BackgroundImage} alt="Background" />
       </div>
 
      
