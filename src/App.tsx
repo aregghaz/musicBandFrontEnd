@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import './App.scss';
+import './fonts.scss';
 import HeroSection from './components/HeroSection/HeroSection';
 import AlbumSection from './components/AlbumSection/AlbumSection';
 import AboutSection from './components/AboutSection/AboutSection';
