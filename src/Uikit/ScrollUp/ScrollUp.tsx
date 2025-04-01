@@ -1,21 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import './ScrollUp.scss'
+import './ScrollUp.scss';
+import { useVisibility } from '../../hooks/useVIsibility';
 
 const ScrollUp = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
-
+  const { isVisible } = useVisibility();
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -25,7 +13,9 @@ const ScrollUp = () => {
 
   return (
     <button
-      className={`scroll-to-top fixed bottom-5 right-5 bg-blue-500 text-white p-3 rounded-full shadow-lg transition-opacity ${isVisible ? 'visible' : 'hidden'}`}
+      className={`scroll-to-top fixed bottom-5 right-5 bg-blue-500 text-white p-3 rounded-full shadow-lg transition-opacity ${
+        isVisible ? 'visible' : 'hidden'
+      }`}
       onClick={scrollToTop}
       aria-label="Scroll to top"
     >

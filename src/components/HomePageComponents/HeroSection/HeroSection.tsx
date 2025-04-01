@@ -1,13 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Image1 from '../../../assets/img/1.jpg';
 import Image2 from '../../../assets/img/18.jpg';
-import { useState } from 'react';
+import Nav from '../../Common/Nav/Nav';
+import Button from '../../../Uikit/Button/Button';
+
+const slides = [
+  {
+    src: Image1,
+    title: 'Welcome to Mousiqua',
+    subtitle: 'Music Band and Musician Bootstrap Template',
+  },
+  {
+    src: Image2,
+    title: 'Limitless',
+    subtitle: 'New Album Available Everywhere',
+    video: 'https://www.youtube.com/watch?v=Gc2en3nHxA4',
+  },
+];
+
+const navigationItems = [
+  'Home',
+  'About',
+  'Discography',
+  'Band',
+  'Tours',
+  'Gallery',
+  'News',
+  'Contact',
+];
 
 const HeroSection = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [isOpenedMenu, setIsOpenedMenu] = useState<boolean>(false);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -15,37 +43,31 @@ const HeroSection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 5000,
     fade: true,
     arrows: true,
     pauseOnHover: false,
-    beforeChange: (oldIndex, newIndex) => {
-      setActiveIndex(newIndex); // Update active index
-    },
-   
+    afterChange: (currentIndex) => setActiveIndex(currentIndex),
+    draggable: true,
+    swipe: true,
+    touchThreshold: 10,
   };
 
-  const slides = [
-    {
-      src: Image1,
-      title: 'welcome to mousiqua',
-      subtitle: 'Music Band and Musician Bootstrap Template',
-    },
-    {
-      src: Image2,
-      title: 'limitless',
-      subtitle: 'New Album Available Everywhere',
-      video: 'https://www.youtube.com/watch?v=Gc2en3nHxA4',
-    },
-  ];
+  const hamdleOpenMenu = () => {
+    setIsOpenedMenu(true);
+  };
 
   return (
     <section className="hero">
       <Slider {...settings} className="main-slider">
         {slides.map((slide, index) => (
-          <div key={`${index}`} className="slide-item">
-            <div className={`background-img overlay zoom ${index === activeIndex ? "slick-active" : ""}`} >
-              <img src={slide.src} alt="slide" />
+          <div key={index} className="slide-item">
+            <div
+              className={`background-img overlay ${
+                index === activeIndex ? 'zoom' : ''
+              }`}
+            >
+              <img src={slide.src} alt={slide.title} />
             </div>
             <div className="container hero-content">
               <div className="row">
@@ -60,10 +82,10 @@ const HeroSection = () => {
                     </h5>
                     {index === 0 && <div className="front-rect"></div>}
                     {slide.video && (
-                      <a
-                        className="video-play-but popup-youtube"
-                        href={slide.video}
-                      ></a>
+                      <Button
+                      >
+                        <a className="video-play-but popup-youtube"></a>
+                      </Button>
                     )}
                   </div>
                 </div>
@@ -73,55 +95,7 @@ const HeroSection = () => {
         ))}
       </Slider>
 
-      <header className="header default">
-        <div className="left-part">
-          <a className="logo scroll" href="#wrapper">
-            <h2 className="mb-0 uppercase">mousiqua.</h2>
-          </a>
-        </div>
-        <div className="right-part">
-          <nav className="main-nav">
-            <div className="toggle-mobile-but">
-              <a href="#" className="mobile-but">
-                <div className="lines"></div>
-              </a>
-            </div>
-            <ul className="main-menu list-inline">
-              {[
-                'Home',
-                'about',
-                'discography',
-                'Band',
-                'Tours',
-                'Gallery',
-                'News',
-                'Contact',
-              ].map((item, idx) => (
-                <li key={idx}>
-                  <a
-                    className="scroll list-inline-item"
-                    href={`#${item.toLowerCase()}`}
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
-              <li className="block-helper">
-                <a href="#album" className="scroll">
-                  <span>
-                    <i className="icon-cd-2"></i>
-                  </span>
-                </a>
-              </li>
-              <li className="block-helper">
-                <span className="icon search-ico">
-                  <i className="icon-search"></i>
-                </span>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <Nav navItems={navigationItems} />
     </section>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import ScrollUp from '../../Uikit/ScrollUp/ScrollUp';
-import Footer from '../../components/Footer/Footer';
+import Footer from '../../components/Common/Footer/Footer';
 import AboutSection from '../../components/HomePageComponents/AboutSection/AboutSection';
 import AlbumSection from '../../components/HomePageComponents/AlbumSection/AlbumSection';
 import BandMembers from '../../components/HomePageComponents/BandMembers/BandMembers';
