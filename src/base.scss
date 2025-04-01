@@ -411,18 +411,18 @@ img.animated {
 }
 
 .adjust-space {
-  margin-top: -30px;
-  display: block;
+  // margin-top: -30px;
+  // display: block;
 }
 
 .container {
   position: relative;
 }
 
-.indent {
-  text-indent: -999px;
-  display: none;
-}
+// .indent {
+//   text-indent: -999px;
+//   display: none;
+// }
 
 input[type]:-moz-placeholder {
   color: rgba(85, 45, 35, 0.5);
@@ -441,23 +441,33 @@ input[type]:-moz-placeholder {
 }
 
 .zoom {
-  animation: zoom 15s ease 0s normal both infinite;
-  -webkit-animation: zoom 15s ease 0s normal both infinite;
-  -moz-animation: zoom 15s ease 0s normal both infinite;
-  -ms-animation: zoom 15s ease 0s normal both infinite;
-  -o-animation: zoom 15s ease 0s normal both infinite;
+  animation: zoom 12s ease 0s normal both infinite;
+  -webkit-animation: zoom 12s ease 0s normal both infinite;
+  -moz-animation: zoom 12s ease 0s normal both infinite;
+  -ms-animation: zoom 12s ease 0s normal both infinite;
+  -o-animation: zoom 12s ease 0s normal both infinite;
 }
+
+
 
 @keyframes zoom {
   0% {
     transform: scale(1, 1);
   }
-  50% {
+  100% {
     transform: scale(1.1, 1.1);
   }
-  100% {
-    transform: scale(1, 1);
-  }
+  // 100% {
+  //   transform: scale(1, 1);
+  // }
+}
+
+.slick-slide {
+  transition: none; 
+}
+
+.slick-active .animated-bg {
+  animation: zoom 3s linear infinite;
 }
 
 /* Links */
