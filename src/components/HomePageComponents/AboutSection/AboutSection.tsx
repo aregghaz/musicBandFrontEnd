@@ -1,10 +1,11 @@
 import React from "react";
 import AboutBackground from '../../../assets/img/25.jpg';
+import './AboutSection.scss'
 
 const AboutSection = () => {
   return (
     <section id="about" className="about overlay main">
-      <div className="background-img" style={{ background: AboutBackground }}>
+      <div className="background-img about-background" style={{ background: AboutBackground }}>
         <img src={AboutBackground} alt="Background" />
       </div>
 
@@ -51,7 +52,7 @@ const AboutSection = () => {
                 </div>
               </div>
               <div className="col-md-4">
-                <div className="block-content pt-3 pb-3 text-center rounded bg-dark-blue front-p mb-4 mb-lg-0">
+                <div className="block-content pt-3 pb-3 text-center rounded bg-dark-blue front-p mb-4 mb-lg-0 location-block">
                   <h3 className="uppercase mb-0 font-weight-600">Location</h3>
                   <span className="p mb-0">
                     Sunday to Wednesday

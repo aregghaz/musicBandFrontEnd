@@ -6,7 +6,7 @@ import './PreSale.scss'
 const PreSaleSection = () => {
   return (
     <section className="divider overlay">
-      <div className="background-img">
+      <div className="background-img divider-background">
         <img src={BackgroundImage} alt="Background" />
       </div>
 

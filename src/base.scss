@@ -29,6 +29,10 @@ $line-height-p: 1.9;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body,
 div,
@@ -441,35 +445,36 @@ input[type]:-moz-placeholder {
 }
 
 .zoom {
-  animation: zoom 12s ease 0s normal both infinite;
-  -webkit-animation: zoom 12s ease 0s normal both infinite;
-  -moz-animation: zoom 12s ease 0s normal both infinite;
-  -ms-animation: zoom 12s ease 0s normal both infinite;
-  -o-animation: zoom 12s ease 0s normal both infinite;
+  animation: zoom 15s ease 0s normal both infinite;
+  -webkit-animation: zoom 15s ease 0s normal both infinite;
+  -moz-animation: zoom 15s ease 0s normal both infinite;
+  -ms-animation: zoom 15s ease 0s normal both infinite;
+  -o-animation: zoom 15s ease 0s normal both infinite;
 }
-
-
 
 @keyframes zoom {
   0% {
     transform: scale(1, 1);
   }
-  100% {
+  50% {
     transform: scale(1.1, 1.1);
   }
-  // 100% {
-  //   transform: scale(1, 1);
-  // }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 .slick-slide {
-  transition: none; 
+  transition: none;
 }
 
-.slick-active .animated-bg {
-  animation: zoom 3s linear infinite;
-}
+// .slick-active .animated-bg {
+//   animation: zoom 3s linear infinite;
+// }
 
+.lead {
+  font-size: 1rem;
+}
 /* Links */
 a.link {
   margin-bottom: 1rem;
