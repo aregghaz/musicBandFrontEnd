@@ -30,6 +30,7 @@ const BandMembers = () => {
 
         const members = data?.data
         
+        
         return (
           <>
             <SectionTitle title="Band Members" className="mt-5" />
