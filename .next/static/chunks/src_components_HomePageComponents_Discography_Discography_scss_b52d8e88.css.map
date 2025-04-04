@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/HomePageComponents/Discography/Discography.scss.css"],"sourcesContent":[".album-image-wrapper{max-width:255px;width:100%;height:235px}@media(max-width: 991px){.album-image-wrapper{max-width:100%}}.album-image-wrapper img{width:100%;height:100%;position:static !important;object-fit:cover}@media(max-width: 991px){.album-image-wrapper img{transform:unset}}"],"names":[],"mappings":"AAAA;;;;;;AAA6D;EAAyB;;;;;AAAqC;;;;;;;AAA4F;EAAyB"}}]
-}

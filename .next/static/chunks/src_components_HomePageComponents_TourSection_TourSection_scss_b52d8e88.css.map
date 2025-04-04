@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/HomePageComponents/TourSection/TourSection.scss.css"],"sourcesContent":[".tour-section-input{width:100%;display:block;width:100%;padding:.375rem .75rem;font-size:1rem;line-height:1.5;color:#fff !important;background-color:rgba(0,0,0,0);background-clip:padding-box;border:2px solid hsla(0,0%,100%,.5);border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}.tour-section-input:focus{outline:0;border:2px solid hsla(0,0%,100%,.5)}.tour-section-input::placeholder{color:#b8b9bb !important}.tour-button-spaced{margin-left:4px}"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;AAA6T;;;;;AAAwE;;;;AAA0D"}}]
-}
