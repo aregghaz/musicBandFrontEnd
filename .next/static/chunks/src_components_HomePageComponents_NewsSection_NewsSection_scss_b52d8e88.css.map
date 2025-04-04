@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/HomePageComponents/NewsSection/NewsSection.scss.css"],"sourcesContent":[".blog-image-content-wrapper{width:100%;height:400px}.blog-image-content-wrapper .block-content{height:100%}.blog-image-content-wrapper .block-content a img{width:100%;height:100%;object-fit:cover;aspect-ratio:1}@media(max-width: 786px){.blog-content-wrapper{margin-top:20px}}"],"names":[],"mappings":"AAAA;;;;;AAAoD;;;;AAAuD;;;;;;;AAAwG;EAAyB"}}]
+}

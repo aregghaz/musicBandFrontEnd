@@ -1,13 +1,15 @@
 import React from 'react';
-import BackgroundImage from '../../../assets/img/25.jpg';
-import Button from '../../../Uikit/Button/Button';
+import BackgroundImage from '@assets/img/25.jpg';
+import Button from '@uikit/Button/Button';
 import './PreSale.scss'
+import CustomImage from '@uikit/Image/Image';
 
 const PreSaleSection = () => {
   return (
     <section className="divider overlay">
       <div className="background-img divider-background">
-        <img src={BackgroundImage} alt="Background" />
+      
+        <CustomImage src={BackgroundImage} alt="Background"  />
       </div>
 
       <div className="container">

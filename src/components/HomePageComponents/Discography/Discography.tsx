@@ -1,9 +1,10 @@
+'use client'
 import React from 'react';
-import SectionTitle from '../../../Uikit/SectionTitle/SectionTitle';
-import AlbumImg from '../../../assets/img/album/1.jpg';
+import SectionTitle from '@uikit/SectionTitle/SectionTitle';
+import AlbumImg from '@assets/img/album/1.jpg';
 import './Discography.scss';
 import LazyLoadSection from '../../Common/LazyLoadSection/LazyLoadSection';
-import CustomImage from '../../../Uikit/Image/Image';
+import CustomImage from '@uikit/Image/Image';
 
 const albums = [
   { title: 'Limitless', image: AlbumImg },
@@ -29,7 +30,7 @@ const Discography = () => {
             <div className="container">
               <div className="row">
                 {albums &&
-                  albums.map((album, index) => (
+                  albums.map((album:any, index:any) => (
                     <div key={index} className="col-12 col-md-6 col-lg-3">
                       <div className="block-album block-content">
                         <h5 className="mb-0 opc-70 uppercase">

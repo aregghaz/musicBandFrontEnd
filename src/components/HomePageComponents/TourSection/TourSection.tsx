@@ -1,30 +1,24 @@
+'use client';
+
 import React, { useState } from 'react';
-import SectionTitle from '../../../Uikit/SectionTitle/SectionTitle';
+import SectionTitle from '@uikit/SectionTitle/SectionTitle';
 import './TourSection.scss';
-import Button from '../../../Uikit/Button/Button';
-import backImage from '../../../assets/img/album/1.jpg';
+import Button from '@uikit/Button/Button';
 import LazyLoadSection from '../../Common/LazyLoadSection/LazyLoadSection';
-import { formatDateToMonthAndDay } from '../../../utils';
-
-
+import { formatDateToMonthAndDay } from '@utils/index';
 
 const TourSection = () => {
   const [activeTab, setActiveTab] = useState(1);
 
-  const handleTabClick = (tabId) => setActiveTab(tabId);
-
+  const handleTabClick = (tabId: number) => setActiveTab(tabId);
+  
   return (
     <LazyLoadSection
       id="tours"
       className="tour main"
       endpoint={`concerts/type/${activeTab}`}
       renderData={(data) => {
-
-
-        console.log(data,'data');
-        
-        const concerts = data?.data
-
+        const concerts = data?.data;
 
         return (
           <>
@@ -33,8 +27,6 @@ const TourSection = () => {
               <div className="row justify-content-center">
                 <div className="col-12 col-lg-8 col-md-10">
                   <ul className="block-tabs list-inline gap-one-bottom-sm text-center">
-                   
-
                     <li
                       className={`list-inline-item ${
                         activeTab === 1 ? 'active' : ''
@@ -80,34 +72,50 @@ const TourSection = () => {
                         </div> */}
 
                         <div className="block-content gap-one-top-sm text-left">
-                          {Object.keys(concerts).length > 1 ? concerts.map(
-                            ({ concertCity, concertPlace, concertDate, vip }, idx) => (
-                              <div key={idx} className="block-content">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-3">
-                                    <h4 className="switch-fot">{formatDateToMonthAndDay(concertDate)}</h4>
-                                  </div>
-                                  <div className="col-lg-4 col-md-4">
-                                    <h6 className="mb-0 opc-70 uppercase">
-                                      {concertCity}, {activeTab === 1 ? 'USA' : 'AM'}
-                                    </h6>
-                                    <span>{concertPlace}</span>
-                                  </div>
-                                  <div className="col-12 col-lg-5 col-md-5 text-md-right">
-                                    {vip && (
-                                      <Button bordered>
-                                        <i className="icon-ticket"></i>VIP
+                          {Object.keys(concerts).length > 1 ? (
+                            concerts.map(
+                              (
+                                {
+                                  concertCity,
+                                  concertPlace,
+                                  concertDate,
+                                  vip,
+                                }: any,
+                                idx: number
+                              ) => (
+                                <div key={idx} className="block-content">
+                                  <div className="row">
+                                    <div className="col-lg-3 col-md-3">
+                                      <h4 className="switch-fot">
+                                        {formatDateToMonthAndDay(concertDate)}
+                                      </h4>
+                                    </div>
+                                    <div className="col-lg-4 col-md-4">
+                                      <h6 className="mb-0 opc-70 uppercase">
+                                        {concertCity},{' '}
+                                        {activeTab === 1 ? 'USA' : 'AM'}
+                                      </h6>
+                                      <span>{concertPlace}</span>
+                                    </div>
+                                    <div className="col-12 col-lg-5 col-md-5 text-md-right">
+                                      {vip && (
+                                        <Button bordered>
+                                          <i className="icon-ticket"></i>VIP
+                                        </Button>
+                                      )}
+                                      <Button className="tour-button-spaced">
+                                        <i className="icon-ticket"></i>Buy
+                                        Ticket
                                       </Button>
-                                    )}
-                                    <Button className="tour-button-spaced">
-                                      <i className="icon-ticket"></i>Buy Ticket
-                                    </Button>
+                                    </div>
                                   </div>
+                                  {idx !== concerts.length - 1 && <hr />}
                                 </div>
-                                {idx !== concerts.length - 1 && <hr />}
-                              </div>
+                              )
                             )
-                          ) : <span>No concerts found</span>}
+                          ) : (
+                            <span>No concerts found</span>
+                          )}
                         </div>
                       </li>
                     </ul>

@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Image1 from '../../../assets/img/1.jpg';
-import Image2 from '../../../assets/img/18.jpg';
+import Image1 from '@assets/img/1.jpg';
+import Image2 from '@assets/img/18.jpg';
 import Nav from '../../Common/Nav/Nav';
-import Button from '../../../Uikit/Button/Button';
+import Button from '@uikit/Button/Button';
+import CustomImage from '@uikit/Image/Image';
+
 
 const slides = [
   {
@@ -47,7 +49,7 @@ const HeroSection = () => {
     fade: true,
     arrows: true,
     pauseOnHover: false,
-    afterChange: (currentIndex) => setActiveIndex(currentIndex),
+    afterChange: (currentIndex:any) => setActiveIndex(currentIndex),
     draggable: true,
     swipe: true,
     touchThreshold: 10,
@@ -67,7 +69,7 @@ const HeroSection = () => {
                 index === activeIndex ? 'zoom' : ''
               }`}
             >
-              <img src={slide.src} alt={slide.title} />
+              <CustomImage src={slide.src} alt={slide.title} />
             </div>
             <div className="container hero-content">
               <div className="row">

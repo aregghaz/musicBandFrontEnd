@@ -1,12 +1,11 @@
 import React from 'react';
-import BlogImage from '../../../assets/img/18.jpg';
 import LazyLoadSection from '../../Common/LazyLoadSection/LazyLoadSection';
-import SectionTitle from '../../../Uikit/SectionTitle/SectionTitle';
-import { formatDate } from '../../../utils';
-import ImagePlaceholder from '../../../assets/img/imagePlaceholder.jpg';
+import SectionTitle from '@uikit/SectionTitle/SectionTitle';
+import { formatDate } from '@utils/index';
+import ImagePlaceholder from '@assets/img/imagePlaceholder.jpg';
 import './NewsSection.scss'
 
-import CustomImage from '../../../Uikit/Image/Image';
+import CustomImage from '@uikit/Image/Image';
 
 const NewsSection = () => {
 

@@ -1,9 +1,11 @@
 import React from 'react';
 
-import AlbumBackground from '../../../assets/img/album/5.jpg';
-import Button from '../../../Uikit/Button/Button';
+import AlbumBackground from '@assets/img/album/5.jpg';
+import Button from '@uikit/Button/Button';
 import './AlbumSection.scss';
-import SectionTitle from '../../../Uikit/SectionTitle/SectionTitle';
+import SectionTitle from '@uikit/SectionTitle/SectionTitle';
+import Image from 'next/image';
+import CustomImage from '@uikit/Image/Image';
 
 const AlbumSection = () => {
   const albumInfo = {
@@ -43,11 +45,7 @@ const AlbumSection = () => {
 
   return (
     <section id="album" className="latest main">
-      {/* <div className="block-content text-center gap-one-bottom-md">
-        <div className="block-title ">
-          <h1 className="uppercase">Latest album</h1>
-        </div>
-      </div> */}
+      
 
       <SectionTitle title="Latest album" />
 
@@ -81,7 +79,11 @@ const AlbumSection = () => {
             <div className="block-tracklist">
               <audio preload="auto" className="album"></audio>
               <div className="block-content pb-0 text-center">
-                <img className="mb-0" src={AlbumBackground} alt="Album Cover" />
+                <CustomImage
+                  className="mb-0 album-image"
+                  src={AlbumBackground}
+                  alt="Album Cover"
+                />
               </div>
               <ol className="playlist">
                 {tracks.map((track, index) => (

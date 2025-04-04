@@ -1,0 +1,30 @@
+/* [project]/src/components/HomePageComponents/TourSection/TourSection.scss.css [app-client] (css) */
+.tour-section-input {
+  width: 100%;
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #0000;
+  background-clip: padding-box;
+  border: 2px solid #ffffff80;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  color: #fff !important;
+}
+
+.tour-section-input:focus {
+  outline: 0;
+  border: 2px solid #ffffff80;
+}
+
+.tour-section-input::placeholder {
+  color: #b8b9bb !important;
+}
+
+.tour-button-spaced {
+  margin-left: 4px;
+}
+
+/*# sourceMappingURL=src_components_HomePageComponents_TourSection_TourSection_scss_b52d8e88.css.map*/

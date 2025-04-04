@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import './App.scss';
 import './fonts.scss';
 import { Route, Routes } from 'react-router-dom';
-import HomePage from './Pages/HomePage/HomePage';
+import HomePage from '../app/page';
 
 const App = () => {
   return (

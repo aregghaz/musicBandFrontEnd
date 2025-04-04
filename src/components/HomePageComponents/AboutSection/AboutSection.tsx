@@ -1,12 +1,15 @@
 import React from "react";
-import AboutBackground from '../../../assets/img/25.jpg';
+import AboutBackground from '@assets/img/25.jpg';
 import './AboutSection.scss'
+import CustomImage from "@uikit/Image/Image";
 
 const AboutSection = () => {
   return (
     <section id="about" className="about overlay main">
       <div className="background-img about-background" style={{ background: AboutBackground }}>
-        <img src={AboutBackground} alt="Background" />
+        {/* <img src={AboutBackground} alt="Background" /> */}
+
+        <CustomImage src={AboutBackground} alt="Background" />
       </div>
 
       <div className="container">

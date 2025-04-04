@@ -1,0 +1,542 @@
+/* [project]/src/Uikit/ScrollUp/ScrollUp.scss.css [app-client] (css) */
+.scroll-to-top {
+  width: 3.2rem;
+  height: 3.2rem;
+  position: fixed;
+  right: 2.875rem;
+  bottom: 3.6875rem;
+  background: #ff5252;
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity .3s, transform .3s;
+}
+
+.scroll-to-top:hover {
+  transform: translate3d(0, -5px, 0);
+}
+
+.scroll-to-top.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+}
+
+
+/* [project]/src/components/HomePageComponents/AboutSection/AboutSection.scss.css [app-client] (css) */
+.about-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.location-block {
+  background: #13181d !important;
+}
+
+
+/* [project]/src/Uikit/Button/Button.scss.css [app-client] (css) */
+.btn-primary {
+  background-color: #0000 !important;
+  border-color: #ffffff12 !important;
+  color: #ffffffb3 !important;
+}
+
+.btn-primary:focus {
+  border-color: #ffffff12 !important;
+  box-shadow: none !important;
+}
+
+.btn-primary:hover {
+  color: #fff !important;
+}
+
+.border-2 {
+  border-color: #ff5252 !important;
+}
+
+.border-2:focus {
+  border-color: #ff5252 !important;
+  box-shadow: none !important;
+}
+
+
+/* [project]/src/components/HomePageComponents/AlbumSection/AlbumSection.scss.css [app-client] (css) */
+.album-actions-block {
+  display: flex;
+  flex-direction: row;
+  height: max-content;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (width <= 786px) {
+  .album-actions-block {
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+}
+
+
+/* [project]/src/Uikit/SectionTitle/SectionTitle.scss.css [app-client] (css) */
+.title-styles {
+  font-size: 2.875rem;
+}
+
+
+/* [project]/src/components/HomePageComponents/BandMembers/BandMembers.scss.css [app-client] (css) */
+.block-member img {
+  object-fit: fill;
+  aspect-ratio: 1;
+  position: static !important;
+}
+
+
+/* [project]/src/components/HomePageComponents/ContactSection/ContactSection.scss.css [app-client] (css) */
+.stay-in-toch-card {
+  background: none !important;
+  border: unset !important;
+}
+
+
+/* [project]/src/components/HomePageComponents/Discography/Discography.scss.css [app-client] (css) */
+.album-image-wrapper {
+  max-width: 255px;
+  width: 100%;
+  height: 235px;
+}
+
+@media (width <= 991px) {
+  .album-image-wrapper {
+    max-width: 100%;
+  }
+}
+
+.album-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: static !important;
+}
+
+@media (width <= 991px) {
+  .album-image-wrapper img {
+    transform: unset;
+  }
+}
+
+
+/* [project]/src/Uikit/ImageModal/ImageModal.scss.css [app-client] (css) */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.image-modal .modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
+}
+
+.image-modal .modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image-modal .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+/* [project]/src/components/HomePageComponents/GallerySection/GallerySection.scss.css [app-client] (css) */
+.gallery {
+  border-bottom: 1px solid #3b4b5b4d !important;
+}
+
+.image-container {
+  cursor: pointer;
+}
+
+
+/* [project]/node_modules/slick-carousel/slick/slick.css [app-client] (css) */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  display: table;
+  content: "";
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid #0000;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+
+/* [project]/node_modules/slick-carousel/slick/ajax-loader.gif (static in css) */
+/* embedded static asset "/_next/static/media/ajax-loader.326aa633.gif" */
+
+/* [project]/node_modules/slick-carousel/slick/fonts/slick.eot (static in css) */
+/* embedded static asset "/_next/static/media/slick.a3496dc3.eot" */
+
+/* [project]/node_modules/slick-carousel/slick/fonts/slick.eot? (static in css) */
+/* embedded static asset "/_next/static/media/slick.a3496dc3.eot" */
+
+/* [project]/node_modules/slick-carousel/slick/fonts/slick.woff (static in css) */
+/* embedded static asset "/_next/static/media/slick.6bbd91df.woff" */
+
+/* [project]/node_modules/slick-carousel/slick/fonts/slick.ttf (static in css) */
+/* embedded static asset "/_next/static/media/slick.0349f530.ttf" */
+
+/* [project]/node_modules/slick-carousel/slick/fonts/slick.svg (static in css) */
+/* embedded static asset "/_next/static/media/slick.ca1acda0.svg" */
+
+/* [project]/node_modules/slick-carousel/slick/slick-theme.css [app-client] (css) */
+.slick-loading .slick-list {
+  background: #fff url("../media/ajax-loader.326aa633.gif") center no-repeat;
+}
+
+@font-face {
+  font-family: slick;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../media/slick.a3496dc3.eot");
+  src: url("../media/slick.a3496dc3.eot") format("embedded-opentype"), url("../media/slick.6bbd91df.woff") format("woff"), url("../media/slick.0349f530.ttf") format("truetype"), url("../media/slick.ca1acda0.svg") format("svg");
+}
+
+.slick-prev, .slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: #0000;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+  color: #0000;
+  outline: none;
+  background: none;
+}
+
+.slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
+  opacity: 1;
+}
+
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+  opacity: .25;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-family: slick;
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: -25px;
+}
+
+[dir="rtl"] .slick-prev {
+  right: -25px;
+  left: auto;
+}
+
+.slick-prev:before {
+  content: "←";
+}
+
+[dir="rtl"] .slick-prev:before {
+  content: "→";
+}
+
+.slick-next {
+  right: -25px;
+}
+
+[dir="rtl"] .slick-next {
+  right: auto;
+  left: -25px;
+}
+
+.slick-next:before {
+  content: "→";
+}
+
+[dir="rtl"] .slick-next:before {
+  content: "←";
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: #0000;
+  border: 0;
+  outline: none;
+  background: none;
+}
+
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+}
+
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+.slick-dots li button:before {
+  font-family: slick;
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "•";
+  text-align: center;
+  opacity: .25;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: #000;
+}
+
+
+/* [project]/src/components/HomePageComponents/NewsSection/NewsSection.scss.css [app-client] (css) */
+.blog-image-content-wrapper {
+  width: 100%;
+  height: 400px;
+}
+
+.blog-image-content-wrapper .block-content {
+  height: 100%;
+}
+
+.blog-image-content-wrapper .block-content a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+@media (width <= 786px) {
+  .blog-content-wrapper {
+    margin-top: 20px;
+  }
+}
+
+
+/* [project]/src/components/HomePageComponents/PreSaleSection/PreSale.scss.css [app-client] (css) */
+.divider-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pre-sale-button {
+  margin-top: 3rem !important;
+  padding: .6875rem 1.2rem !important;
+  font-size: 12px !important;
+}
+
+
+/* [project]/src/components/HomePageComponents/TourSection/TourSection.scss.css [app-client] (css) */
+.tour-section-input {
+  width: 100%;
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #0000;
+  background-clip: padding-box;
+  border: 2px solid #ffffff80;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  color: #fff !important;
+}
+
+.tour-section-input:focus {
+  outline: 0;
+  border: 2px solid #ffffff80;
+}
+
+.tour-section-input::placeholder {
+  color: #b8b9bb !important;
+}
+
+.tour-button-spaced {
+  margin-left: 4px;
+}
+
+
+/* [project]/src/components/HomePageComponents/TwitterSection/TwitterSection.scss.css [app-client] (css) */
+.twitter-bordered {
+  border-top: 1px solid #3b4b5b4d;
+  border-bottom: 1px solid #3b4b5b4d;
+}
+
+
+/*# sourceMappingURL=_616e67de._.css.map*/

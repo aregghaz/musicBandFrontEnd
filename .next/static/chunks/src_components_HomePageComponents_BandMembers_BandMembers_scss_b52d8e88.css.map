@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/HomePageComponents/BandMembers/BandMembers.scss.css"],"sourcesContent":[".block-member img{position:static !important;object-fit:fill;aspect-ratio:1}"],"names":[],"mappings":"AAAA"}}]
+}
