@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, FC } from 'react';
-import { BASE_URL } from '../../../utils';
+import { BASE_URL } from '@utils/index';
+import { fetchLazyData } from 'app/actions/serverActions';
 
 interface ILazyLoadSection {
   className?: string;
@@ -15,8 +16,8 @@ const LazyLoadSection: FC<ILazyLoadSection> = ({
   className = '',
 }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [data, setData] = useState(null);
-  const sectionRef = useRef(null);
+  const [data, setData] = useState<any>(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -42,17 +43,15 @@ const LazyLoadSection: FC<ILazyLoadSection> = ({
 
   useEffect(() => {
     if (isVisible) {
-      fetch(`${BASE_URL}/${endpoint}`)
-        .then((response: any) => response.json())
+    
+      fetchLazyData(`${BASE_URL}/${endpoint}`).then(setData);
 
-        
-        .then((data) => {
-            setData(data)
-        })
-
-        .catch((error) => {
-          console.error('Error fetching data', error);
-        });
+      //   fetch(`${BASE_URL}/${endpoint}`)
+      //     .then((response) => response.json())
+      //     .then((data) => setData(data))
+      //     .catch((error) => {
+      //       console.error('Error fetching data', error);
+      //     });
     }
   }, [isVisible, endpoint]);
 

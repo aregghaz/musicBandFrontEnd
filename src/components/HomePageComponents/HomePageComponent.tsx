@@ -1,23 +1,36 @@
-import React from "react";
-import ScrollUp from '../../Uikit/ScrollUp/ScrollUp';
-import Footer from '../../components/Common/Footer/Footer';
-import AboutSection from '../../components/HomePageComponents/AboutSection/AboutSection';
-import AlbumSection from '../../components/HomePageComponents/AlbumSection/AlbumSection';
-import BandMembers from '../../components/HomePageComponents/BandMembers/BandMembers';
-import ContactSection from '../../components/HomePageComponents/ContactSection/ContactSection';
-import Discography from '../../components/HomePageComponents/Discography/Discography';
-import DividerSection from '../../components/HomePageComponents/DividerSection/DividerSection';
-import GallerySection from '../../components/HomePageComponents/GallerySection/GallerySection';
-import HeroSection from '../../components/HomePageComponents/HeroSection/HeroSection';
-import NewsSection from '../../components/HomePageComponents/NewsSection/NewsSection';
-import PreSaleSection from '../../components/HomePageComponents/PreSaleSection/PreSaleSection';
-import TourSection from '../../components/HomePageComponents/TourSection/TourSection';
-import TwitterSection from '../../components/HomePageComponents/TwitterSection/TwitterSection';
+'use client'
 
-const HomePage = () => {
+import React from "react";
+import ScrollUp from '@uikit/ScrollUp/ScrollUp';
+import Footer from '@components/Common/Footer/Footer';
+import AboutSection from '@components/HomePageComponents/AboutSection/AboutSection';
+import AlbumSection from '@components/HomePageComponents/AlbumSection/AlbumSection';
+import BandMembers from '@components/HomePageComponents/BandMembers/BandMembers';
+import ContactSection from '@components/HomePageComponents/ContactSection/ContactSection';
+import Discography from '@components/HomePageComponents/Discography/Discography';
+import DividerSection from '@components/HomePageComponents/DividerSection/DividerSection';
+import GallerySection from '@components/HomePageComponents/GallerySection/GallerySection';
+import HeroSection from '@components/HomePageComponents/HeroSection/HeroSection';
+import NewsSection from '@components/HomePageComponents/NewsSection/NewsSection';
+import PreSaleSection from '@components/HomePageComponents/PreSaleSection/PreSaleSection';
+import TourSection from '@components/HomePageComponents/TourSection/TourSection';
+import TwitterSection from '@components/HomePageComponents/TwitterSection/TwitterSection';
+
+export const metadata = {
+  title: 'Blog',
+  openGraph: {
+    title: 'Blog',
+  },
+}
+ 
+// Output:
+// <title>Blog</title>
+// <meta property="og:title" content="Blog" />
+
+const HomePageComponent = () => {
   return (
     <div className="wrapper">
-      <div className="block-search-form">
+      {/* <div className="block-search-form">
         <div className="block-content">
           <div className="container">
             <div className="row justify-content-center">
@@ -50,7 +63,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <HeroSection />
 
@@ -78,13 +91,10 @@ const HomePage = () => {
 
       <Footer />
 
-      {/* <a className="block-top scroll" href="#wrapper">
-        <i className="icon-angle-up"></i>
-      </a> */}
-
+  
       <ScrollUp />
     </div>
   );
 };
 
-export default HomePage;
+export default HomePageComponent;

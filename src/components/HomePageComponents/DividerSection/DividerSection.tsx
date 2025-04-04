@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import BackgroundImage from '../../../assets/img/25.jpg';
+import BackgroundImage from '@assets/img/25.jpg';
+import CustomImage from '@uikit/Image/Image';
 
 const DividerSection = () => {
   return (
     <section className="divider overlay">
       <div className="background-img divider-background">
-        <img src={BackgroundImage} alt="Background" />
+        <CustomImage src={BackgroundImage} alt="Background"  />
+        <img src={BackgroundImage}  />
       </div>
       <div className="container">
         <div className="row justify-center">
